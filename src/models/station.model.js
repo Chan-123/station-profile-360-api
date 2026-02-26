@@ -1,14 +1,20 @@
 const mongoose = require('mongoose');
 
 const stationSchema = new mongoose.Schema({
-  stationName: String,
-  stationCode: String,
+  stationName: {
+    type: String,
+    required: true
+  },
+  stationCode: {
+    type: String,
+    required: true
+  },
   category: String,
   platforms: Number,
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
+  avgFootfall: Number,
+  avgRevenuePerDay: Number
+}, {
+  timestamps: true
 });
 
 module.exports = mongoose.model('Station', stationSchema);
