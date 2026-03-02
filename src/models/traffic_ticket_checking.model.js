@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ticketCheckingSchema = new mongoose.Schema({
+const trafficTicketCheckingSchema = new mongoose.Schema({
   staffWorking: Number,
   avgCasesPerDay: Number,
   avgEarningsPerDay: Number,
@@ -13,4 +13,7 @@ const ticketCheckingSchema = new mongoose.Schema({
   ]
 }, { timestamps: true });
 
-module.exports = mongoose.model('TrafficTicketChecking', ticketCheckingSchema);
+module.exports = mongoose.model(
+  'TrafficTicketChecking',
+  trafficTicketCheckingSchema
+);

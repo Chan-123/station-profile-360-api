@@ -8,6 +8,7 @@ const contractRoutes = require('./routes/contract.routes');
 const expenditureRoutes = require('./routes/expenditure.routes');
 const trafficUnreservedRoutes = require('./routes/traffic_unreserved.routes');
 const trafficReservedRoutes = require('./routes/traffic_reserved.routes');
+const trafficTicketCheckingRoutes = require('./routes/traffic_ticket_checking.routes');
 const app = express();
 
 app.use(cors());
@@ -18,5 +19,6 @@ app.use('/api/contracts', contractRoutes);
 app.use('/api/expenditures', expenditureRoutes);
 app.use('/api/traffic/unreserved', trafficUnreservedRoutes);
 app.use('/api/traffic/reserved', trafficReservedRoutes);
+app.use('/api/traffic/ticket-checking', trafficTicketCheckingRoutes);
 
 module.exports = app;
