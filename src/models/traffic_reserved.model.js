@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const reservedSchema = new mongoose.Schema({
+const trafficReservedSchema = new mongoose.Schema({
   avgTransactionsPerDay: Number,
   avgEarningsPerDay: Number,
   yearlyData: [
@@ -12,4 +12,4 @@ const reservedSchema = new mongoose.Schema({
   ]
 }, { timestamps: true });
 
-module.exports = mongoose.model('TrafficReserved', reservedSchema);
+module.exports = mongoose.model('TrafficReserved', trafficReservedSchema);
