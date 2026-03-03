@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const parcelSchema = new mongoose.Schema({
+const trafficParcelSchema = new mongoose.Schema({
   avgLoadingPerDay: Number,
   avgEarningsPerDay: Number,
   yearlyData: [
@@ -12,4 +12,4 @@ const parcelSchema = new mongoose.Schema({
   ]
 }, { timestamps: true });
 
-module.exports = mongoose.model('TrafficParcel', parcelSchema);
+module.exports = mongoose.model('TrafficParcel', trafficParcelSchema);

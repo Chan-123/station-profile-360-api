@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 
-const retiringRoomSchema = new mongoose.Schema({
+const trafficRetiringRoomSchema = new mongoose.Schema({
   mannedBy: String,
-  rooms: [String],
+  rooms: [
+    {
+      roomType: String,
+      rate: Number
+    }
+  ],
   yearlyEarnings: [
     {
       year: String,
@@ -11,4 +16,7 @@ const retiringRoomSchema = new mongoose.Schema({
   ]
 }, { timestamps: true });
 
-module.exports = mongoose.model('TrafficRetiringRoom', retiringRoomSchema);
+module.exports = mongoose.model(
+  'TrafficRetiringRoom',
+  trafficRetiringRoomSchema
+);
